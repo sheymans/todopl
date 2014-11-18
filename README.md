@@ -6,7 +6,7 @@ on top of a [SWI-Prolog](http://www.swi-prolog.org/) server.
 
 `todopl` actually started out as [Sheldonize](https://sheldonize.com), but was
 taken out of production in favor of a Django-based web application (which is
-still alive and kicking at [Sheldonize](https://sheldonize.com).
+still alive and kicking at [Sheldonize](https://sheldonize.com)).
 
 Contributions to `todopl` are most welcome (see below); I think it serves as a
 nice use case for combining SWI-Prolog with a Clojure desktop application.
