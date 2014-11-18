@@ -1,3 +1,21 @@
+"""
+    Copyright (C) 2012-2014 Stijn Heymans
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+"""
+
+
 (ns todopl.maintenance
   (:require [todopl.database :as db])
   (:require [todopl.utilities :as utils])
@@ -136,8 +154,7 @@
   (>= (.indexOf osname "mac") 0))
 
 (defn is-linux [osname]
-  (println "os version ")
-  (println osname))
+  (>= (.indexOf osname "linux") 0))
 
 (defn get-os-name []
   (.toLowerCase (System/getProperty "os.name")))
@@ -155,11 +172,12 @@
                           ;; killed
                           (println (.waitFor winproc))))
       (is-mac os) (do
-                        (println "Making sure to kill already running background servers using killall command")
+                    (println "Making sure to kill already running background servers using killall command")
                     (.exec rt "killall todopl_server"))
-      :else (do
-              (println (is-linux os))
-              (println "Cannot do a local precautionary kill of todopl_server as I do not know which system you are running on.")))))
+      (is-linux os) (do
+                      (println "Making sure to kill already running background servers using killall command")
+                      (.exec rt "killall todopl_server"))
+      :else (println "Cannot do a local precautionary kill of todopl_server as I do not know which system you are running on."))))
 
 (defn start-prolog-server []
   (let [ server-location (str (System/getProperty "user.dir") "/todopl_server")]

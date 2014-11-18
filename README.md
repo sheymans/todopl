@@ -11,14 +11,14 @@ still alive and kicking at [Sheldonize](https://sheldonize.com)).
 Contributions to `todopl` are most welcome (see below); I think it serves as a
 nice use case for combining SWI-Prolog with a Clojure desktop application.
 
-
 ## Requirements
 
 This was tested on a
 
     Linux 3.13.0-39-generic #66-Ubuntu SMP Tue Oct 28 13:30:27 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
 
-However, it should work on most systems given the following requirements (most can be relaxed) are satisfied:
+However, it should work on most systems given the following requirements (most
+can be relaxed) are satisfied:
 
 - Java 7 JDK
 - [SWI-Prolog 6.6.4](http://www.swi-prolog.org/)
@@ -42,9 +42,4 @@ Thanks a lot for playing around!
 ## License
 
 GNU General Public License, Version 3 and higher.
-
-## TODO
-
-- Plenty of tests to be added
-- Add licensing information to each file
 
