@@ -100,7 +100,7 @@
 
 (defn a-license
   [e]
-  (let [url "http://www.todopl.com/license.html"]
+  (let [url "http://www.gnu.org/licenses/gpl.html"]
     (goto url)))
 
 (defn a-sheldy

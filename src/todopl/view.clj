@@ -651,58 +651,58 @@ meeting-frame))
 (defn lower-buttons-panel
   []
   (let [
-        twitter-button (lookfeel/sh-button :twitter-button "Follow us on Twitter" "twitter.png")
-        facebook-button (lookfeel/sh-button :facebook-button "Like us on Facebook" "facebook.png")
-        google-button (lookfeel/sh-button :google-button "Follow us on Google+" "google.png")
-        todopl-button (lookfeel/sh-button :todopl-button "Go to the Todopl website" "todopl_full.png")
-        help (lookfeel/sh-hyperlink "help" :help-link)
+        ; twitter-button (lookfeel/sh-button :twitter-button "Follow us on Twitter" "twitter.png")
+        ; facebook-button (lookfeel/sh-button :facebook-button "Like us on Facebook" "facebook.png")
+        ; google-button (lookfeel/sh-button :google-button "Follow us on Google+" "google.png")
+        ; todopl-button (lookfeel/sh-button :todopl-button "Go to the Todopl website" "todopl_full.png")
+        ; help (lookfeel/sh-hyperlink "help" :help-link)
         license (lookfeel/sh-hyperlink "license" :license-link)
-        ack (lookfeel/sh-hyperlink "acknowledgements" :ack-link)
+        ; ack (lookfeel/sh-hyperlink "acknowledgements" :ack-link)
         lower-butns (mig-panel
                       :id :lower-buttons
                       :background lookfeel/upper-buttons-color
                       :constraints ["" "[left]10[left]8[left]8[left]push[right]10[right]10[right]" "5[]5"]
                       :items [
-                              [todopl-button ""]
-                              [twitter-button ""]
-                              [facebook-button ""]
-                              [google-button ""]
-                              [ack ""]
+                              ; [todopl-button ""]
+                              ; [twitter-button ""]
+                              ; [facebook-button ""]
+                              ; [google-button ""]
+                              ; [ack ""]
                               [license ""]
-                              [help ""]
+                              ; [help ""]
                               ])]
 
-    (config! help
-             :listen
-             [:mouse-clicked common/a-help])
-    ;    (config! help
-    ;             :tip
-    ;             "Get some online help")
+;    (config! help
+;             :listen
+;             [:mouse-clicked common/a-help])
+;    ;    (config! help
+;    ;             :tip
+;    ;             "Get some online help")
     (config! license
              :listen
              [:mouse-clicked common/a-license])
     ;    (config! license
     ;             :tip
     ;             "What you can and cannot do with this software")
-    (config! ack 
-             :listen
-             [:mouse-clicked common/a-ack])
-    ;    (config! ack
-    ;             :tip
-    ;             "Todopl relies on some great open source software")
-    (config! todopl-button
-             :listen
-             [:action common/a-sheldy])
-    (config! twitter-button
-             :listen
-             [:action common/a-twitter])
-    (config! facebook-button
-             :listen
-             [:action common/a-facebook])
-
-    (config! google-button
-             :listen
-             [:action common/a-google])
+;    (config! ack 
+;             :listen
+;             [:mouse-clicked common/a-ack])
+;    ;    (config! ack
+;    ;             :tip
+;    ;             "Todopl relies on some great open source software")
+;    (config! todopl-button
+;             :listen
+;             [:action common/a-sheldy])
+;    (config! twitter-button
+;             :listen
+;             [:action common/a-twitter])
+;    (config! facebook-button
+;             :listen
+;             [:action common/a-facebook])
+;
+;    (config! google-button
+;             :listen
+;             [:action common/a-google])
     lower-butns))
 
 
