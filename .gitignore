@@ -1,6 +1,7 @@
 .lein-deps-sum
 classes/
 lib/
-todopl-1.1.2-SNAPSHOT-standalone.jar
-todopl-1.1.2-SNAPSHOT.jar
+todopl-*-SNAPSHOT-standalone.jar
+todopl-*-SNAPSHOT.jar
 todopl_server
+src/foreign/ms_exchange/target/
